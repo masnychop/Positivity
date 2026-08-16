@@ -1,77 +1,21 @@
-# React + TypeScript + Vite
+# Journal
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Journal is a note-taking and journaling application that brings the free-form, tactile feel of writing on paper into a digital space you can carry across your devices.
 
-Currently, two official plugins are available:
+## Purpose
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+Most digital note apps force a choice: either you get rigid, structured text boxes, or you get a blank canvas with no intelligence behind it. Journal aims to sit in between. It is built around a canvas where you can write and draw by hand, exactly like you would in a physical notebook, while also giving you the tools to organize, search, and revisit what you have captured.
 
-## React Compiler
+A core idea behind the project is bridging the physical and the digital. If you jot something down on paper, you should be able to photograph it and have it become part of your digital notes, transcribed and searchable, without losing the handwritten original. The canvas is not just for text either. You can pin photos, sketches, and fragments of thought onto a page the way you might pin things to a corkboard, building pages that feel personal rather than templated.
 
-The React Compiler is enabled on this template. See [this documentation](https://react.dev/learn/react-compiler) for more information.
+## Goals
 
-Note: This will impact Vite dev & build performances.
+- A writing and drawing experience that feels natural on both a mouse and a stylus
+- A consistent experience whether you are on desktop or mobile
+- The ability to turn a photo of handwritten notes into transcribed, editable text without losing the original
+- A high degree of customization, so a page can look and feel the way you want it to
+- A focus on wellbeing rather than engagement. The goal is a calm space for reflection, not a product designed to maximize time spent in it
 
-## Expanding the ESLint configuration
+## Status
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
-
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
-
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-
-```
-
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
-
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-
-```
+This project is in early, active development.
